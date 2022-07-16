@@ -6,6 +6,7 @@ import './App.scss';
 
 function App() {
   const [coins, setCoins] = useState([]);
+  const [search, setSearch] = useState('');
 
   useEffect(() => {
     axios
@@ -20,12 +21,20 @@ function App() {
       .catch((error) => console.log(error));
   }, []);
 
+  const handleChange = (e) => {
+    setSearch(e.target.value);
+  };
+
+  const filteredCoins = coins.filter((coin) =>
+    coin.name.toLowerCase().includes(search.toLowerCase())
+  );
+
   return (
     <div className="home">
       <div className="container">
         <h1>Cryptocurrencies</h1>
-        <Search />
-        <CoinList />
+        <Search handleChange={handleChange} />
+        <CoinList filteredCoins={filteredCoins} />
       </div>
     </div>
   );

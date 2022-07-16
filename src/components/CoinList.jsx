@@ -2,10 +2,10 @@ import React from 'react';
 import Coin from './Coin';
 import './CoinList.scss';
 
-const CoinList = () => {
+const CoinList = ({ filteredCoins }) => {
   return (
     <div className="coin-list">
-      <Coin />
+      <Coin filteredCoins={filteredCoins} />
     </div>
   );
 };
