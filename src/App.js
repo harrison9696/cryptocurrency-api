@@ -34,7 +34,7 @@ function App() {
       <div className="container">
         <h1 className="text-center mx-50">Cryptocurrencies</h1>
         <Search handleChange={handleChange} />
-        <CoinList filteredCoins={filteredCoins} />
+        <CoinList filteredCoins={filteredCoins} search={search} />
       </div>
     </div>
   );

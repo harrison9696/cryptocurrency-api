@@ -1,8 +1,9 @@
 import React from 'react';
 import Coin from './Coin';
+import ClipLoader from 'react-spinners/ClipLoader';
 import './CoinList.scss';
 
-const CoinList = ({ filteredCoins }) => {
+const CoinList = ({ filteredCoins, search }) => {
   return (
     <div className="coin-list">
       <div className="coin-list__key">
@@ -14,7 +15,18 @@ const CoinList = ({ filteredCoins }) => {
         <div className="bold">Change</div>
         <div className="bold">Mkt Cap</div>
       </div>
-      {filteredCoins != '' ? <div></div> : <div>Loading...</div>}
+      {filteredCoins == '' && search == '' ? (
+        <div className="text-center mx-50">
+          <ClipLoader color={'#7a02b2'} size={'75'} />
+        </div>
+      ) : (
+        <></>
+      )}
+      {filteredCoins == '' && search != '' ? (
+        <div className="mx-20">No cryptocurrencies found. Please try another search.</div>
+      ) : (
+        <></>
+      )}
       {filteredCoins.map((coin) => {
         return (
           <Coin
