@@ -1,8 +1,7 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-
+import Search from './components/Search';
 import CoinList from './components/CoinList';
-
 import './App.scss';
 
 function App() {
@@ -24,6 +23,8 @@ function App() {
   return (
     <div className="home">
       <div className="container">
+        <h1>Cryptocurrencies</h1>
+        <Search />
         <CoinList />
       </div>
     </div>
