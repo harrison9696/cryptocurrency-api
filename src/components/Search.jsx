@@ -3,7 +3,7 @@ import './Search.scss';
 
 const Search = ({ handleChange }) => {
   return (
-    <div className="search">
+    <div className="search text-center mx-50">
       <form>
         <input
           className="search__input"

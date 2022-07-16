@@ -32,7 +32,7 @@ function App() {
   return (
     <div className="home">
       <div className="container">
-        <h1>Cryptocurrencies</h1>
+        <h1 className="text-center mx-50">Cryptocurrencies</h1>
         <Search handleChange={handleChange} />
         <CoinList filteredCoins={filteredCoins} />
       </div>

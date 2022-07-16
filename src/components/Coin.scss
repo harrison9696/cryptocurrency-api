@@ -1,0 +1,17 @@
+.coin {
+  margin: 20px 0px;
+
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+
+  &__image {
+    max-width: 66px;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+  }
+}

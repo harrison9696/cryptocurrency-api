@@ -1,0 +1,17 @@
+.search__input {
+  outline: none;
+  border: none;
+  padding: 15px 10px;
+  background-image: linear-gradient(
+    -225deg,
+    #3800c7 0%,
+    #5c0ebb 48%,
+    #7a02b2 100%
+  );
+  min-width: 300px;
+  color: #f7f7f7;
+}
+
+.search__input::placeholder {
+  color: #f7f7f7;
+}
