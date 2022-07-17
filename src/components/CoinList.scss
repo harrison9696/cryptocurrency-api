@@ -2,8 +2,14 @@
 
   &__key {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     border-bottom: 1px solid #f7f7f7;
     padding-bottom: 20px;
+  }
+}
+
+@media (max-width: 900px) {
+  .coin-list__key {
+    display: none;
   }
 }

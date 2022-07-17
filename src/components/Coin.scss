@@ -3,7 +3,8 @@
 
   &__container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
   }
 
   &__image {
@@ -13,5 +14,30 @@
   &__item {
     display: flex;
     align-items: center;
+  }
+
+  &__mobile {
+    display: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .coin {
+    margin-bottom: 50px;
+  }
+
+  .coin__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  p.coin__item {
+    margin: 5px 0px;
+  }
+
+  .coin__mobile {
+    display: block;
   }
 }

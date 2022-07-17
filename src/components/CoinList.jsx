@@ -8,8 +8,7 @@ const CoinList = ({ filteredCoins, search }) => {
     <div className="coin-list">
       <div className="coin-list__key">
         <div></div>
-        <div className="bold">Name</div>
-        <div className="bold">Symbol</div>
+        <div className="bold">Name (symbol)</div>
         <div className="bold">Price(£)</div>
         <div className="bold">Volume(£)</div>
         <div className="bold">Change</div>
